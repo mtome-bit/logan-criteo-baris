@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logan × Criteo — Partnership Overview LATAM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:    #e93842;
+    --yellow: #ffbf0d;
+    --orange: #ff681e;
+    --blue:   #0062ff;
+    --cyan:   #00cefa;
+    --green:  #4ebb7a;
+    --pink:   #ff859e;
+    --black:  #000000;
+    --off:    #f6f6f3;
+    --gray:   #2a2a2a;
+    --mid:    #666666;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--off);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  /* ─── WORDMARK ─── */
+  .logan-mark {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+
+  /* ─── COVER ─── */
+  .cover {
+    background: var(--red);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: 48px 56px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -80px;
+    width: 420px; height: 420px;
+    background: var(--yellow);
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+    opacity: 0.55;
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    top: -40px; right: 120px;
+    width: 200px; height: 200px;
+    background: var(--pink);
+    border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+    opacity: 0.45;
+  }
+
+  .cover-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(56px, 8vw, 96px);
+    color: var(--off);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .cover-logo sup {
+    font-size: 0.28em;
+    vertical-align: super;
+    letter-spacing: 0;
+    font-weight: 700;
+  }
+
+  .cover-meta {
+    text-align: right;
+    color: var(--off);
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.85;
+    line-height: 1.6;
+  }
+
+  .cover-body {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--off);
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+
+  .cover-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(48px, 9vw, 120px);
+    color: var(--off);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.92;
+    margin-bottom: 32px;
+  }
+
+  .cover-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--off);
+    opacity: 0.88;
+    max-width: 480px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  .cover-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .pill {
+    background: rgba(246,246,243,0.18);
+    border: 1px solid rgba(246,246,243,0.35);
+    color: var(--off);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── NAV BAR ─── */
+  .nav-bar {
+    background: var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+  }
+
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--off);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .nav-logo sup { font-size: 0.4em; vertical-align: super; }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(246,246,243,0.55);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--yellow); }
+
+  .nav-conf {
+    font-size: 11px;
+    color: rgba(246,246,243,0.35);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 80px 56px; }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(38px, 5vw, 64px);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    margin-bottom: 40px;
+    color: var(--black);
+  }
+
+  .section-title em {
+    font-style: normal;
+    color: var(--red);
+  }
+
+  /* ─── SECTION 1: ABOUT LOGAN ─── */
+  .about {
+    background: var(--off);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-bottom: 56px;
+  }
+
+  .about-lead {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--gray);
+  }
+
+  .about-body {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+  .about-body p + p { margin-top: 16px; }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .stat-box {
+    background: var(--off);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .stat-box:nth-child(1) { background: var(--yellow); }
+
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1;
+    color: var(--black);
+    letter-spacing: -0.02em;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 6px;
+  }
+
+  /* ─── SECTION 2: CAPABILITIES ─── */
+  .capabilities {
+    background: var(--black);
+  }
+
+  .capabilities .section-title { color: var(--off); }
+  .capabilities .section-label { color: rgba(246,246,243,0.4); }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(246,246,243,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 56px;
+  }
+
+  .product-card {
+    padding: 36px 32px;
+    background: var(--gray);
+    transition: background .2s;
+  }
+  .product-card:hover { background: #333; }
+  .product-card:first-child { background: var(--yellow); }
+  .product-card:first-child .product-name,
+  .product-card:first-child .product-desc,
+  .product-card:first-child .product-tag { color: var(--black); }
+  .product-card:first-child .product-tag { background: rgba(0,0,0,0.12); }
+
+  .product-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(246,246,243,0.12);
+    color: var(--off);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .product-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: var(--off);
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .product-desc {
+    font-size: 14px;
+    color: rgba(246,246,243,0.65);
+    line-height: 1.6;
+  }
+
+  .verticals-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(246,246,243,0.45);
+    margin-bottom: 16px;
+  }
+
+  .verticals-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .vert-tag {
+    background: rgba(246,246,243,0.07);
+    border: 1px solid rgba(246,246,243,0.12);
+    color: rgba(246,246,243,0.8);
+    padding: 7px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .vert-tag.highlight {
+    background: rgba(255,191,13,0.15);
+    border-color: rgba(255,191,13,0.35);
+    color: var(--yellow);
+    font-weight: 600;
+  }
+
+  /* ─── SECTION 3: COMMERCE MEDIA — THE UNLOCK ─── */
+  .unlock {
+    background: var(--yellow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .unlock::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -60px;
+    width: 300px; height: 300px;
+    background: var(--orange);
+    border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+    opacity: 0.4;
+  }
+
+  .unlock .section-label { color: rgba(0,0,0,0.45); }
+  .unlock .section-title { color: var(--black); }
+
+  .unlock-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    background: var(--black);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+  }
+
+  .unlock-col {
+    background: var(--off);
+    padding: 36px 32px;
+  }
+  .unlock-col:last-child { background: var(--black); }
+
+  .unlock-col-header {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--black);
+  }
+  .unlock-col:last-child .unlock-col-header {
+    color: var(--yellow);
+    border-bottom-color: rgba(246,246,243,0.15);
+  }
+
+  .unlock-list {
+    list-style: none;
+  }
+  .unlock-list li {
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    color: var(--gray);
+    padding-left: 20px;
+    position: relative;
+  }
+  .unlock-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: 700;
+  }
+  .unlock-col:last-child .unlock-list li {
+    color: rgba(246,246,243,0.75);
+    border-bottom-color: rgba(246,246,243,0.08);
+  }
+  .unlock-col:last-child .unlock-list li::before { color: var(--cyan); }
+
+  .unlock-callout {
+    background: var(--black);
+    border-radius: 16px;
+    padding: 40px 48px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .unlock-callout::before {
+    content: '↗';
+    position: absolute;
+    right: 40px; top: 30px;
+    font-size: 80px;
+    color: rgba(246,246,243,0.06);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .unlock-callout-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 16px;
+  }
+
+  .unlock-callout-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(22px, 3vw, 32px);
+    color: var(--off);
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .unlock-callout-body {
+    font-size: 15px;
+    color: rgba(246,246,243,0.7);
+    line-height: 1.65;
+    max-width: 800px;
+  }
+  .unlock-callout-body strong { color: var(--off); font-weight: 600; }
+
+  /* ─── SECTION 4: SUCCESS CASES ─── */
+  .cases {
+    background: var(--off);
+  }
+
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .case-card {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1.5px solid rgba(0,0,0,0.08);
+  }
+
+  .case-header {
+    padding: 24px 24px 20px;
+    background: var(--black);
+  }
+  .case-card:nth-child(2) .case-header { background: var(--red); }
+  .case-card:nth-child(3) .case-header { background: var(--blue); }
+
+  .case-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: var(--off);
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+
+  .case-vertical {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(246,246,243,0.5);
+  }
+
+  .case-body {
+    padding: 20px 24px 24px;
+    background: var(--off);
+  }
+
+  .case-metric {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .case-metric-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    color: var(--black);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .case-card:nth-child(2) .case-metric-num { color: var(--red); }
+  .case-card:nth-child(3) .case-metric-num { color: var(--blue); }
+
+  .case-metric-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--mid);
+  }
+
+  .case-desc {
+    font-size: 13.5px;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  .case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+  .case-tag {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: rgba(0,0,0,0.06);
+    color: var(--gray);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  .go-to-market {
+    background: var(--black);
+    border-radius: 16px;
+    padding: 40px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .gtm-col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  .gtm-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: var(--off);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .gtm-sublabel {
+    font-size: 13px;
+    color: rgba(246,246,243,0.5);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  .gtm-note {
+    font-size: 14px;
+    color: rgba(246,246,243,0.65);
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  .gtm-note strong { color: var(--off); }
+
+  /* ─── SECTION 5: PARTNERSHIP PROPOSAL ─── */
+  .proposal {
+    background: var(--red);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .proposal::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -80px;
+    width: 350px; height: 350px;
+    background: var(--pink);
+    border-radius: 50% 50% 55% 45% / 45% 55% 45% 55%;
+    opacity: 0.3;
+  }
+
+  .proposal .section-label { color: rgba(246,246,243,0.5); }
+  .proposal .section-title { color: var(--off); }
+
+  .markets-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .markets-table th {
+    background: rgba(0,0,0,0.35);
+    color: rgba(246,246,243,0.7);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    text-align: left;
+  }
+  .markets-table th:first-child { border-radius: 10px 0 0 0; }
+  .markets-table th:last-child { border-radius: 0 10px 0 0; }
+
+  .markets-table td {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--off);
+    border-bottom: 1px solid rgba(246,246,243,0.1);
+    background: rgba(0,0,0,0.2);
+    vertical-align: top;
+  }
+
+  .markets-table tr:last-child td { border-bottom: none; }
+  .markets-table tr:last-child td:first-child { border-radius: 0 0 0 10px; }
+  .markets-table tr:last-child td:last-child { border-radius: 0 0 10px 0; }
+
+  .market-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .priority-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .priority-high { background: var(--yellow); color: var(--black); }
+  .priority-med  { background: rgba(246,246,243,0.15); color: rgba(246,246,243,0.75); }
+
+  .rationale-text {
+    font-size: 13.5px;
+    color: rgba(246,246,243,0.7);
+    line-height: 1.55;
+  }
+
+  .proposal-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .prop-box {
+    background: rgba(0,0,0,0.25);
+    border-radius: 14px;
+    padding: 32px;
+    border: 1px solid rgba(246,246,243,0.12);
+  }
+
+  .prop-box-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .prop-box-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--off);
+    margin-bottom: 10px;
+  }
+
+  .prop-box-body {
+    font-size: 14px;
+    color: rgba(246,246,243,0.7);
+    line-height: 1.6;
+  }
+
+  .eu-strip {
+    background: rgba(0,0,0,0.2);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border: 1px solid rgba(246,246,243,0.1);
+  }
+
+  .eu-strip-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(246,246,243,0.45);
+    white-space: nowrap;
+    min-width: 100px;
+  }
+
+  .eu-markets {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .eu-market {
+    background: rgba(246,246,243,0.1);
+    border: 1px solid rgba(246,246,243,0.18);
+    color: var(--off);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .eu-note {
+    font-size: 13px;
+    color: rgba(246,246,243,0.5);
+    line-height: 1.5;
+    max-width: 340px;
+  }
+
+  /* ─── SECTION 6: NEXT STEPS ─── */
+  .nextsteps {
+    background: var(--off);
+  }
+
+  .steps-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .step-card {
+    background: var(--black);
+    border-radius: 14px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .step-card:nth-child(2) { background: var(--yellow); }
+  .step-card:nth-child(3) { background: var(--gray); }
+
+  .step-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 1;
+    color: rgba(246,246,243,0.06);
+    position: absolute;
+    top: 16px; right: 20px;
+    letter-spacing: -0.04em;
+  }
+  .step-card:nth-child(2) .step-num { color: rgba(0,0,0,0.07); }
+
+  .step-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: var(--off);
+    margin-bottom: 12px;
+    line-height: 1.1;
+    position: relative;
+    z-index: 1;
+  }
+  .step-card:nth-child(2) .step-title { color: var(--black); }
+
+  .step-body {
+    font-size: 14px;
+    color: rgba(246,246,243,0.65);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+  .step-card:nth-child(2) .step-body { color: rgba(0,0,0,0.65); }
+
+  /* ─── CTA ─── */
+  .cta-block {
+    background: var(--black);
+    border-radius: 20px;
+    padding: 56px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-block::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%;
+    transform: translateX(-50%);
+    width: 400px; height: 200px;
+    background: var(--yellow);
+    border-radius: 50%;
+    opacity: 0.07;
+    filter: blur(40px);
+  }
+
+  .cta-eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 20px;
+  }
+
+  .cta-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(36px, 5vw, 64px);
+    text-transform: uppercase;
+    color: var(--off);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .cta-body {
+    font-size: 16px;
+    color: rgba(246,246,243,0.6);
+    max-width: 520px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+
+  .cta-contact {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(246,246,243,0.07);
+    border: 1px solid rgba(246,246,243,0.14);
+    border-radius: 12px;
+    padding: 20px 36px;
+  }
+
+  .cta-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: var(--off);
+    letter-spacing: 0.01em;
+  }
+  .cta-role {
+    font-size: 13px;
+    color: rgba(246,246,243,0.5);
+    font-weight: 500;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black);
+    padding: 24px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(246,246,243,0.06);
+  }
+
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: rgba(246,246,243,0.35);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .footer-logo sup { font-size: 0.4em; }
+
+  .footer-conf {
+    font-size: 11px;
+    color: rgba(246,246,243,0.2);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .footer-date {
+    font-size: 12px;
+    color: rgba(246,246,243,0.25);
+    font-weight: 500;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    section { padding: 60px 28px; }
+    .cover { padding: 36px 28px 36px; }
+    .nav-bar { padding: 0 28px; }
+    .nav-links { display: none; }
+    footer { padding: 20px 28px; }
+
+    .about-grid,
+    .go-to-market,
+    .proposal-boxes,
+    .unlock-grid { grid-template-columns: 1fr; }
+
+    .stats-row,
+    .products-grid,
+    .cases-grid,
+    .steps-list { grid-template-columns: 1fr; }
+
+    .cover-title { font-size: clamp(40px, 12vw, 80px); }
+
+    .eu-strip { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+    .cta-block { padding: 40px 28px; }
+  }
+
+  @media (max-width: 600px) {
+    .markets-table { display: block; overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     COVER
+════════════════════════════════════════════════ -->
+<section class="cover" id="cover">
+  <div class="cover-nav">
+    <div class="cover-logo">LOGAN<sup>®</sup></div>
+    <div class="cover-meta">
+      Prepared for: <strong>Baris</strong> — Criteo<br>
+      From: Manuel Tomé, Logan.ai<br>
+      April 2026 — Confidential
+    </div>
+  </div>
+  <div class="cover-body">
+    <div class="cover-eyebrow">Partnership Overview</div>
+    <h1 class="cover-title">Logan<br>× Criteo</h1>
+    <p class="cover-subtitle">Building the most differentiated commerce media proposition in LATAM ex-Brazil — from day one.</p>
+    <div class="cover-pills">
+      <span class="pill">Argentina → Mexico → Peru → Colombia</span>
+      <span class="pill">Commerce Media + Real-World Attribution</span>
+      <span class="pill">1,200+ Brands · 350+ Agencies</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     STICKY NAV
+════════════════════════════════════════════════ -->
+<nav class="nav-bar">
+  <div class="nav-logo">LOGAN<sup>®</sup></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#unlock">The Unlock</a></li>
+    <li><a href="#cases">Track Record</a></li>
+    <li><a href="#proposal">Partnership</a></li>
+    <li><a href="#nextsteps">Next Steps</a></li>
+  </ul>
+  <div class="nav-conf">Confidential</div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     01. ABOUT LOGAN
+════════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="section-label">01 — About Logan</div>
+  <h2 class="section-title">Performance<br>at <em>Scale.</em></h2>
+
+  <div class="about-grid">
+    <div class="about-lead">
+      Logan is an adtech company with a global footprint across Latin America, Europe, Africa, and the United States — focused on driving measurable business outcomes through commerce and e-commerce media.
+    </div>
+    <div class="about-body">
+      <p>We work directly with brands and through their agencies, positioning Logan as a strategic infrastructure partner — not a traditional vendor. Our model is built around performance and attribution across the full consumer journey: sales, store visits, and digital interactions.</p>
+      <p>Logan does not operate its own DSP or SSP. We integrate and commercialize third-party inventory and technologies, acting as a connective infrastructure layer. This keeps us partner-driven, flexible, and deeply embedded in the evolving media landscape.</p>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="stat-num">1,200+</div>
+      <div class="stat-label">Brand Clients</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">350+</div>
+      <div class="stat-label">Agency Partners</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Continents</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Years in Market</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     02. CAPABILITIES
+════════════════════════════════════════════════ -->
+<section class="capabilities" id="capabilities">
+  <div class="section-label">02 — Capabilities Core</div>
+  <h2 class="section-title">Our <em style="color:var(--yellow)">Stack.</em></h2>
+
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-tag">Flagship</div>
+      <div class="product-name">Logan Ads</div>
+      <div class="product-desc">Cross-channel programmatic platform with 150+ ad formats. Full campaign management from display and video to audio and gaming. End-to-end execution — strategy, setup, optimization, reporting.</div>
+    </div>
+    <div class="product-card">
+      <div class="product-tag">Data Layer</div>
+      <div class="product-name">Super Small Data</div>
+      <div class="product-desc">First-party data engine and audience intelligence (DaaS). Proprietary cookieless segmentation and targeting — <strong style="color:rgba(246,246,243,0.9)">directly complementary to Criteo's commerce data signals.</strong></div>
+    </div>
+    <div class="product-card">
+      <div class="product-tag">Inventory</div>
+      <div class="product-name">PMP</div>
+      <div class="product-desc">Premium private marketplace focused on video, audio, and gaming verticals — high-attention environments ideal for commerce contexts and upper-funnel brand impact.</div>
+    </div>
+  </div>
+
+  <div class="verticals-title">Strongest Client Verticals</div>
+  <div class="verticals-list">
+    <span class="vert-tag highlight">CPG / FMCG — Nestlé · Coca-Cola</span>
+    <span class="vert-tag highlight">Retail &amp; E-commerce</span>
+    <span class="vert-tag">Automotive — BMW</span>
+    <span class="vert-tag">Technology — Google · Amazon</span>
+    <span class="vert-tag">Financial Services</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     03. THE UNLOCK — COMMERCE MEDIA + ATTRIBUTION
+════════════════════════════════════════════════ -->
+<section class="unlock" id="unlock">
+  <div class="section-label">03 — What the Partnership Unlocks</div>
+  <h2 class="section-title">Neither Can<br>Do This <em>Alone.</em></h2>
+
+  <div class="unlock-grid">
+    <div class="unlock-col">
+      <div class="unlock-col-header">What Logan Brings</div>
+      <ul class="unlock-list">
+        <li><strong>Metamobility</strong> — real-world location data tracking users across their physical and digital daily life</li>
+        <li><strong>Super Small Data</strong> — cookieless first-party audiences built from on- and off-channel signals</li>
+        <li>150+ ad formats for activation across any digital environment</li>
+        <li>PMP with in-game, CTV, and audio inventory — premium commerce contexts</li>
+        <li>1,200+ brand relationships + 350+ agency partners across LATAM</li>
+      </ul>
+    </div>
+    <div class="unlock-col">
+      <div class="unlock-col-header">What Criteo Brings</div>
+      <ul class="unlock-list">
+        <li>700M+ daily active shoppers with purchase intent signals</li>
+        <li>4B+ SKUs with real-time cart and transaction data</li>
+        <li>Best-in-class retargeting engine for commerce and retail</li>
+        <li>Commerce Yield for retail media monetization</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="unlock-callout">
+    <div class="unlock-callout-label">The Differentiated Proposition</div>
+    <div class="unlock-callout-title">Full-Funnel Commerce Attribution:<br>Online + Offline</div>
+    <div class="unlock-callout-body">
+      Logan's <strong>Metamobility</strong> tracks a user's physical movements and purchase behaviour in the real world. Criteo tracks that same user's online shopping behaviour, cart activity, and transactions. <strong>Together, we can connect a digital ad impression to an in-store purchase</strong> — closing the attribution gap that most advertisers in LATAM still cannot solve.<br><br>
+      A CPG brand like Nestlé or Coca-Cola can run a programmatic campaign through Logan Ads, retarget high-intent shoppers via Criteo's commerce engine, and then measure whether those users actually walked into a store and bought the product — using Logan's real-world location data as the attribution layer. <strong>That is a proposition no other partnership in LATAM can currently offer.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     04. TRACK RECORD
+════════════════════════════════════════════════ -->
+<section class="cases" id="cases">
+  <div class="section-label">04 — Track Record</div>
+  <h2 class="section-title">Proof Points<br>That <em>Matter.</em></h2>
+
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-header">
+        <div class="case-brand">Nestlé</div>
+        <div class="case-vertical">CPG / FMCG — Joint Venture</div>
+      </div>
+      <div class="case-body">
+        <div class="case-metric">
+          <div class="case-metric-num">€2M</div>
+          <div class="case-metric-label">/ year under management</div>
+        </div>
+        <div class="case-desc">Long-term JV with one of Criteo's strongest global verticals. Proof of our ability to close and manage large enterprise accounts in CPG — with full-cycle execution across campaign strategy, buying, and attribution.</div>
+        <div class="case-tags">
+          <span class="case-tag">JV</span>
+          <span class="case-tag">CPG</span>
+          <span class="case-tag">LATAM</span>
+          <span class="case-tag">Full-Funnel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <div class="case-brand">Google &amp; Amazon</div>
+        <div class="case-vertical">Technology — Direct Brand</div>
+      </div>
+      <div class="case-body">
+        <div class="case-metric">
+          <div class="case-metric-num">Tier 1</div>
+          <div class="case-metric-label">global clients</div>
+        </div>
+        <div class="case-desc">Active brand relationships with technology leaders — demonstrating Logan's capability to operate at the standards required by the most demanding global advertisers. Direct indicator of data, reporting, and compliance maturity.</div>
+        <div class="case-tags">
+          <span class="case-tag">Technology</span>
+          <span class="case-tag">Direct</span>
+          <span class="case-tag">Global</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <div class="case-brand">BMW</div>
+        <div class="case-vertical">Automotive — Enterprise</div>
+      </div>
+      <div class="case-body">
+        <div class="case-metric">
+          <div class="case-metric-num">Multi</div>
+          <div class="case-metric-label">market activation</div>
+        </div>
+        <div class="case-desc">Multi-market automotive campaigns combining brand and performance objectives — with real-world attribution via Metamobility to measure dealership visits as an outcome metric. Directly validates the Logan + Criteo attribution proposition.</div>
+        <div class="case-tags">
+          <span class="case-tag">Automotive</span>
+          <span class="case-tag">Attribution</span>
+          <span class="case-tag">Metamobility</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="go-to-market">
+    <div>
+      <div class="gtm-col-title">Direct Brands</div>
+      <div class="gtm-num">1,200+</div>
+      <div class="gtm-sublabel">Active clients in network</div>
+      <div class="gtm-note">Established relationships with <strong>marketing and media decision-makers</strong> at enterprise level across all LATAM markets. Pipeline for Criteo is not zero — it starts from day one.</div>
+    </div>
+    <div>
+      <div class="gtm-col-title">Agency Channel</div>
+      <div class="gtm-num">350+</div>
+      <div class="gtm-sublabel">Agency partners</div>
+      <div class="gtm-note">Two-channel approach maximizes reach and <strong>accelerates Criteo's business development</strong> beyond what direct sales alone could achieve. Our agency relationships are deeply integrated across all major LATAM holding groups.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     05. PARTNERSHIP PROPOSAL
+════════════════════════════════════════════════ -->
+<section class="proposal" id="proposal">
+  <div class="section-label">05 — Partnership Proposal</div>
+  <h2 class="section-title">Markets &amp;<br><em style="color:var(--yellow)">Structure.</em></h2>
+
+  <table class="markets-table">
+    <thead>
+      <tr>
+        <th>Market</th>
+        <th>Rationale</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="market-name">Mexico</span></td>
+        <td class="rationale-text">Largest e-commerce market in LATAM ex-BR. Strong CPG and retail client base. High e-commerce penetration = ideal Criteo environment.</td>
+        <td><span class="priority-badge priority-high">★★★ High</span></td>
+      </tr>
+      <tr>
+        <td><span class="market-name">Colombia</span></td>
+        <td class="rationale-text">Fast-growing digital ad market. Strong retail and financial services verticals. Good agency density and growing mid-market advertiser sophistication.</td>
+        <td><span class="priority-badge priority-high">★★★ High</span></td>
+      </tr>
+      <tr>
+        <td><span class="market-name">Peru</span></td>
+        <td class="rationale-text">Growing e-commerce adoption. CPG and retail are dominant categories. Good white space for Criteo — commerce media largely untapped.</td>
+        <td><span class="priority-badge priority-high">★★★ High</span></td>
+      </tr>
+      <tr>
+        <td><span class="market-name">Chile</span></td>
+        <td class="rationale-text">Highest digital maturity in the region. Sophisticated advertisers ready for commerce media. Strong retail ecosystem.</td>
+        <td><span class="priority-badge priority-high">★★★ High</span></td>
+      </tr>
+      <tr>
+        <td><span class="market-name">Argentina<br>+ Rest of LATAM</span></td>
+        <td class="rationale-text">Solid local relationships — noted as a strong starting point by Criteo. Present across all remaining markets with established local teams.</td>
+        <td><span class="priority-badge priority-med">★★ Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="proposal-boxes">
+    <div class="prop-box">
+      <span class="prop-box-icon">🎯</span>
+      <div class="prop-box-title">Core Verticals for Criteo via Logan</div>
+      <div class="prop-box-body">
+        <strong style="color:var(--off)">CPG / FMCG</strong> — high purchase frequency, proven retargeting ROI. Criteo's commerce data + Logan's 1PD audiences = highly precise targeting for repeat purchase.<br><br>
+        <strong style="color:var(--off)">Retail &amp; E-commerce</strong> — core Criteo use case. LATAM e-commerce is growing fast and most mid-large retailers are not yet using commerce media.<br><br>
+        <strong style="color:var(--off)">Financial Services</strong> — high-value conversions, intent-driven audience. Strong measurable ROI from retargeting for financial products.
+      </div>
+    </div>
+    <div class="prop-box">
+      <span class="prop-box-icon">⚙️</span>
+      <div class="prop-box-title">Why Logan, Not Aleph</div>
+      <div class="prop-box-body">
+        Logan offers Criteo something Aleph cannot: <strong style="color:var(--off)">real-world attribution at scale</strong> through Metamobility. The partnership is not a reseller arrangement — it is a data and attribution integration that creates a differentiated proposition for LATAM advertisers.<br><br>
+        We bring <strong style="color:var(--off)">existing, activated commercial relationships</strong> across CPG, retail, and financial services in every priority market — not a greenfield pipeline that still needs to be built.
+      </div>
+    </div>
+  </div>
+
+  <div class="eu-strip">
+    <div class="eu-strip-label">EU Footprint</div>
+    <div class="eu-markets">
+      <span class="eu-market">🇪🇸 Spain — HQ</span>
+      <span class="eu-market">🇵🇹 Portugal</span>
+      <span class="eu-market">🇮🇹 Italy</span>
+    </div>
+    <div class="eu-note">GDPR-compliant data infrastructure already in place. If the LATAM pilot succeeds, the partnership can scale into EU markets where Logan already operates.</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     06. NEXT STEPS
+════════════════════════════════════════════════ -->
+<section class="nextsteps" id="nextsteps">
+  <div class="section-label">06 — Next Steps</div>
+  <h2 class="section-title">How We<br><em>Move Forward.</em></h2>
+
+  <div class="steps-list">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-title">Alignment Call</div>
+      <div class="step-body">Walk through this overview together. Align on which markets and verticals Criteo wants to prioritize first. Identify any technical or commercial requirements on Criteo's side before moving to proposal stage.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-title">Revenue Model by Market</div>
+      <div class="step-body">Build a bottoms-up revenue model using Criteo's average revenue per advertiser and the addressable client base Logan can activate per market. Logan can have a first estimate ready before the call.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-title">Go-to-Market Proposal</div>
+      <div class="step-body">Once we align on structure, Logan delivers a detailed GTM proposal with activation timeline, account targets, commercial model, and attribution integration approach. Pilot market: Argentina or Mexico.</div>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta-eyebrow">Ready when you are</div>
+    <div class="cta-title">Let's Build This<br>Together.</div>
+    <div class="cta-body">Happy to jump on a call to walk through this and start working on a revenue model by market. The opportunity is significant — and the window to move in LATAM is now.</div>
+    <div class="cta-contact">
+      <div class="cta-name">Manuel Tomé</div>
+      <div class="cta-role">Partner, Logan.ai</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">LOGAN<sup>®</sup></div>
+  <div class="footer-conf">Confidential — Prepared for Criteo</div>
+  <div class="footer-date">April 2026</div>
+</footer>
+
+</body>
+</html>
