@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logan × Criteo — Partnership Overview · LATAM ex-Brazil</title>
+<style>
+  :root{
+    --orange:#ff681e;
+    --red:#e93842;
+    --yellow:#ffbf0d;
+    --green:#4ebb7a;
+    --cyan:#00cefa;
+    --blue:#0062ff;
+    --pink:#ff859e;
+    --black:#000000;
+    --paper:#f6f6f3;
+    --bone:#f6f6f3;
+    --rule:rgba(0,0,0,.12);
+    --rule-strong:rgba(0,0,0,.24);
+    --muted:#3a3a38;
+    --muted-2:#6e6e6a;
+    --display:"Barlow Condensed", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+    --body:"Inter", ui-sans-serif, system-ui, sans-serif;
+    --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+    --pad: clamp(28px, 6vw, 96px);
+    --maxw: 1240px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--black);
+    font-family:var(--body);
+    font-size:15.5px; line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--black); color:#fff}
+  a{color:inherit; text-decoration:none; transition:color .18s ease;}
+  a:hover{color:var(--orange)}
+  p{margin:0 0 1em} p:last-child{margin-bottom:0}
+  img{display:block; max-width:100%}
+  ul{margin:0; padding:0; list-style:none}
+
+  /* TYPOGRAPHY */
+  h1,h2,h3,h4{margin:0; font-family:var(--display); font-weight:800; letter-spacing:-.005em; color:var(--black); text-transform:uppercase;}
+  h1{font-size:clamp(60px, 10vw, 152px); font-weight:800; line-height:.92; letter-spacing:-.015em;}
+  h2{font-size:clamp(38px, 5.2vw, 76px); line-height:.98; font-weight:800;}
+  h3{font-size:clamp(24px, 2.4vw, 34px); line-height:1.05; font-weight:700;}
+  h4{font-size:15px; line-height:1.3; font-family:var(--body); font-weight:600; letter-spacing:0; text-transform:none;}
+
+  .eyebrow{
+    font-family:var(--mono); font-size:11px; font-weight:500;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--muted-2);
+  }
+  .eyebrow .red{ color:var(--red); }
+  .lead{ font-size:19px; line-height:1.6; color:var(--black); font-weight:400; max-width:62ch; }
+  .body{ font-size:15.5px; line-height:1.75; color:var(--black); }
+  .body-muted{ color:var(--muted); }
+  .small{ font-size:13.5px; line-height:1.65; color:var(--muted); }
+  .mono{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
+
+  /* LAYOUT */
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 var(--pad); }
+  section{ padding:clamp(72px, 9vw, 140px) 0; border-top:1px solid var(--rule); scroll-margin-top:80px; }
+  section.alt{ background:var(--bone); }
+  section:first-of-type{ border-top:0; }
+
+  /* TOP NAV */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .topbar-in{
+    max-width:var(--maxw); margin:0 auto;
+    padding:14px var(--pad);
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+    font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  }
+  .topbar .brand{ color:var(--black); font-weight:500; }
+  .topbar .brand .x{ color:var(--orange); margin:0 6px; }
+  .topbar .links{ display:flex; gap:28px; color:var(--muted-2); }
+  .topbar .links a.on{ color:var(--black); }
+  .topbar .conf{ color:var(--muted-2); }
+  .topbar .conf::before{ content:""; display:inline-block; width:6px; height:6px; background:var(--orange); border-radius:50%; margin-right:8px; vertical-align:middle; }
+  @media (max-width:820px){ .topbar .links{display:none} }
+
+  /* COVER — single yellow surface, centered composition */
+  .cover{
+    background:var(--yellow); color:#000;
+    border-top:0;
+    padding:80px 0;
+    min-height:100vh;
+    display:flex; flex-direction:column; justify-content:center;
+  }
+  .cover .eyebrow{ color:#000; opacity:1; display:block; margin-bottom:24px; }
+  .cover h1.cover-title{
+    color:#000;
+    font-family:var(--display); font-weight:800;
+    font-size:clamp(80px, 12vw, 200px);
+    line-height:.92; letter-spacing:-.02em;
+    text-transform:uppercase;
+    margin:0 0 48px;
+  }
+  .cover h1.cover-title .x{ color:#000; font-weight:500; margin:0 .04em; }
+  .cover .lead{ color:#000; opacity:1; margin:0; max-width:620px; font-size:22px; line-height:1.5; font-family:var(--body); font-weight:400; }
+
+  .cover-meta{
+    margin-top:80px;
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:32px;
+    max-width:760px;
+    font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  }
+  .cover-meta .lbl{ display:block; color:rgba(0,0,0,.7); margin-bottom:8px; font-size:10px; letter-spacing:.18em; }
+  .cover-meta .val{ display:block; color:#000; font-family:var(--body); font-size:14px; letter-spacing:0; text-transform:none; line-height:1.4; font-weight:600; }
+  @media (max-width:820px){ .cover-meta{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:520px){
+    .cover-meta{grid-template-columns:1fr; gap:20px;}
+    .cover h1.cover-title{ font-size:clamp(64px, 18vw, 110px); margin-bottom:36px; }
+    .cover-meta{ margin-top:56px; }
+  }
+
+  /* SECTION HEADER */
+  .sec-head{
+    display:grid; grid-template-columns:160px 1fr; gap:48px;
+    margin-bottom:56px;
+    align-items:start;
+  }
+  .sec-head .num{
+    font-family:var(--mono); font-size:12px; letter-spacing:.2em;
+    color:var(--orange); padding-top:14px; border-top:1px solid var(--orange);
+    text-transform:uppercase;
+  }
+  .sec-head h2 .accent{ color:var(--orange); }
+  @media (max-width:820px){ .sec-head{grid-template-columns:1fr; gap:20px;} }
+
+  /* TWO COL */
+  .twocol{ display:grid; grid-template-columns:1.2fr 1fr; gap:64px; align-items:start; }
+  @media (max-width:980px){ .twocol{grid-template-columns:1fr; gap:36px;} }
+
+  /* PULL CALLOUT (sidebar style) */
+  .pull{
+    border-left:3px solid var(--orange);
+    padding:6px 0 6px 28px;
+  }
+  .pull .eyebrow{ color:var(--orange); }
+  .pull h4{ font-family:var(--display); font-size:28px; font-weight:800; line-height:1.05; margin:14px 0 14px; letter-spacing:-.005em; text-transform:uppercase; }
+
+  /* STATS */
+  .stats{
+    margin-top:64px;
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:0;
+    border-top:1px solid var(--rule);
+  }
+  .stats .cell{
+    padding:36px 28px 32px 0;
+    border-right:1px solid var(--rule);
+    position:relative;
+  }
+  .stats .cell:last-child{ border-right:0; padding-right:0; }
+  .stats .cell::before{
+    content:""; position:absolute; top:-1px; left:0; width:36px; height:3px;
+    background:var(--orange);
+  }
+  .stats .cell.muted::before{ background:var(--rule-strong); }
+  .stats .n{
+    font-family:var(--display); font-weight:800;
+    font-size:clamp(54px, 6.4vw, 88px);
+    line-height:.95; letter-spacing:-.015em;
+    color:var(--black); text-transform:uppercase;
+  }
+  .stats .l{
+    font-family:var(--mono); font-size:11px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--muted); margin-top:14px;
+  }
+  @media (max-width:820px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stats .cell:nth-child(2){ border-right:0; padding-right:0; }
+    .stats .cell:nth-child(3),.stats .cell:nth-child(4){ border-top:1px solid var(--rule); margin-top:-1px; padding-top:36px;}
+  }
+
+  /* CAPABILITIES TABLE */
+  .cap-list{
+    border-top:1px solid var(--rule);
+  }
+  .cap-row{
+    display:grid; grid-template-columns:60px 1fr 2fr 200px;
+    gap:32px;
+    padding:32px 0;
+    border-bottom:1px solid var(--rule);
+    align-items:start;
+  }
+  .cap-row .idx{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--orange); padding-top:6px; }
+  .cap-row .name{ font-family:var(--display); font-size:32px; font-weight:800; letter-spacing:-.005em; line-height:1; text-transform:uppercase; }
+  .cap-row .desc{ color:var(--muted); font-size:15px; line-height:1.65; }
+  .cap-row .tags{ font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted-2); padding-top:6px; }
+  .cap-row .tags span{ display:block; margin-bottom:6px; }
+  @media (max-width:820px){
+    .cap-row{ grid-template-columns:1fr; gap:10px; }
+    .cap-row .tags{ padding-top:0; }
+  }
+
+  /* TAG LIST (verticals) */
+  .taglist{
+    display:flex; flex-wrap:wrap; gap:8px;
+    margin-top:32px;
+  }
+  .taglist .t{
+    display:inline-block;
+    padding:8px 14px;
+    border:1px solid var(--black);
+    font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--black); background:transparent;
+  }
+  .taglist .t.accent{ border-color:var(--orange); color:var(--orange); }
+
+  /* UNLOCK (dark feature) */
+  .unlock{
+    background:var(--black); color:#fff;
+  }
+  .unlock h2{ color:#fff; }
+  .unlock .sec-head .num{ color:var(--orange); border-top-color:var(--orange); }
+  .unlock .eyebrow{ color:rgba(255,255,255,.65); }
+  .unlock .lead{ color:rgba(255,255,255,.9); }
+  .unlock .body{ color:rgba(255,255,255,.9); }
+  .unlock .body-muted{ color:rgba(255,255,255,.7); }
+
+  .duo{
+    display:grid; grid-template-columns:1fr 1fr; gap:0;
+    margin-top:64px;
+    border-top:1px solid rgba(255,255,255,.16);
+  }
+  .duo .col{
+    padding:40px 40px 40px 0;
+    border-right:1px solid rgba(255,255,255,.16);
+  }
+  .duo .col:last-child{ border-right:0; padding-left:40px; padding-right:0; }
+  .duo .col .head{
+    font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:rgba(255,255,255,.5); margin-bottom:20px;
+  }
+  .duo .col h3{ color:#fff; font-size:22px; font-weight:500; margin-bottom:24px; }
+  .duo ul li{
+    display:grid; grid-template-columns:48px 1fr; gap:14px;
+    padding:14px 0;
+    border-top:1px solid rgba(255,255,255,.12);
+    font-size:14.5px; line-height:1.6; color:rgba(255,255,255,.85);
+  }
+  .duo ul li:last-child{ border-bottom:1px solid rgba(255,255,255,.12); }
+  .duo ul li .k{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; color:var(--orange); padding-top:3px; }
+  .duo ul li strong{ color:#fff; font-weight:600; }
+  @media (max-width:820px){
+    .duo{ grid-template-columns:1fr; }
+    .duo .col{ padding:32px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.16); }
+    .duo .col:last-child{ padding:32px 0; }
+  }
+
+  .funnel{
+    margin-top:64px;
+    padding:48px 0 0;
+    border-top:1px solid rgba(255,255,255,.16);
+    display:grid; grid-template-columns:1.2fr 1fr; gap:64px;
+    align-items:start;
+  }
+  .funnel h3{ color:#fff; font-weight:800; font-size:36px; line-height:1; text-transform:uppercase; }
+  .funnel h3 .accent{ color:var(--orange); }
+  .funnel .body p{ color:rgba(255,255,255,.85); margin-bottom:1.1em; }
+  .funnel .body strong{ color:#fff; }
+  .funnel-list{
+    list-style:none; counter-reset:f;
+    padding:0; margin:32px 0 0;
+    border-top:1px solid rgba(255,255,255,.18);
+  }
+  .funnel-list li{
+    counter-increment:f;
+    display:grid; grid-template-columns:48px 1fr;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    font-size:14.5px;
+    color:rgba(255,255,255,.85);
+  }
+  .funnel-list li::before{
+    content:counter(f, decimal-leading-zero);
+    font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--orange);
+    padding-top:3px;
+  }
+  @media (max-width:980px){ .funnel{grid-template-columns:1fr; gap:36px;} }
+
+  /* CASE STUDIES */
+  .cases{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:0;
+    margin-top:0;
+    border-top:1px solid var(--rule);
+  }
+  .cases .case{
+    padding:36px 32px 36px 0;
+    border-right:1px solid var(--rule);
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .cases .case:nth-child(2){ padding-left:32px; padding-right:32px; }
+  .cases .case:last-child{ border-right:0; padding-left:32px; padding-right:0; }
+  .cases .case::before{
+    content:""; display:block; width:36px; height:3px; background:var(--orange);
+    margin-bottom:8px;
+  }
+  .cases .head{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted-2); }
+  .cases .num{
+    font-family:var(--display); font-size:72px; font-weight:800; letter-spacing:-.015em; line-height:.92;
+    margin:8px 0 4px; text-transform:uppercase;
+  }
+  .cases .num small{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); display:block; margin-top:14px; font-weight:400; }
+  .cases .ttl{ font-family:var(--display); font-size:38px; font-weight:800; letter-spacing:-.005em; line-height:1; margin:8px 0 4px; text-transform:uppercase; }
+  .cases .case p{ color:var(--muted); font-size:14.5px; line-height:1.65; }
+  .cases .meta{
+    margin-top:auto;
+    padding-top:18px;
+    border-top:1px solid var(--rule);
+    display:flex; justify-content:space-between;
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted-2);
+  }
+  @media (max-width:980px){
+    .cases{ grid-template-columns:1fr; }
+    .cases .case{ padding:32px 0 !important; border-right:0; border-bottom:1px solid var(--rule); }
+    .cases .case:last-child{ border-bottom:0; }
+  }
+
+  .gtm{
+    margin-top:64px;
+    display:grid; grid-template-columns:1fr 1fr; gap:0;
+    border-top:1px solid var(--rule);
+  }
+  .gtm .g{
+    padding:36px 32px 36px 0;
+    border-right:1px solid var(--rule);
+    position:relative;
+  }
+  .gtm .g:last-child{ border-right:0; padding-left:32px; padding-right:0; }
+  .gtm .g::before{
+    content:""; position:absolute; top:-1px; left:0; width:36px; height:3px; background:var(--orange);
+  }
+  .gtm .g:last-child::before{ left:32px; }
+  .gtm .n{
+    font-family:var(--display); font-weight:800; font-size:72px; line-height:.92; letter-spacing:-.015em; text-transform:uppercase;
+  }
+  .gtm .l{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:14px 0 14px; }
+  .gtm .g p{ color:var(--muted); font-size:14.5px; line-height:1.65; }
+  @media (max-width:820px){
+    .gtm{ grid-template-columns:1fr; }
+    .gtm .g{ padding:32px 0 !important; border-right:0; border-bottom:1px solid var(--rule); }
+    .gtm .g:last-child{ border-bottom:0; }
+    .gtm .g:last-child::before{ left:0; }
+  }
+
+  /* MARKETS TABLE */
+  .markets-note{
+    margin-top:32px; padding:24px; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+    font-size:14.5px; line-height:1.7; color:var(--muted);
+    display:grid; grid-template-columns:160px 1fr; gap:32px;
+  }
+  .markets-note .lbl{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted-2); padding-top:2px;}
+  @media (max-width:820px){ .markets-note{ grid-template-columns:1fr; gap:8px; } }
+
+  .mtable{
+    margin-top:48px;
+    border-top:1px solid var(--rule-strong);
+  }
+  .mhead{
+    display:grid; grid-template-columns:1.2fr 3fr 100px 110px;
+    gap:24px;
+    padding:14px 0;
+    font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--muted-2);
+    border-bottom:1px solid var(--rule);
+  }
+  .mhead > div:last-child{ text-align:right; }
+  .mrow{
+    display:grid; grid-template-columns:1.2fr 3fr 100px 110px;
+    gap:24px;
+    padding:24px 0;
+    border-bottom:1px solid var(--rule);
+    align-items:start;
+    transition:background .15s ease;
+  }
+  .mrow:hover{ background:rgba(10,10,10,.025); }
+  .mrow .country{ font-family:var(--display); font-size:28px; font-weight:800; letter-spacing:-.005em; line-height:1; text-transform:uppercase; }
+  .mrow .why{ color:var(--muted); font-size:14.5px; line-height:1.65; }
+  .mrow .stars{ font-family:var(--body); font-size:14px; color:var(--yellow); letter-spacing:1px; padding-top:4px; }
+  .mrow .stars.med{ color:rgba(0,0,0,.18); }
+  .mrow .stars.med .on{ color:var(--yellow); }
+  .mrow .pri{
+    justify-self:end;
+    display:inline-block;
+    padding:5px 12px;
+    border:1px solid var(--rule-strong);
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--black);
+  }
+  .mrow .pri.high{ border-color:var(--orange); color:var(--orange); }
+  .mrow .pilot-tag{
+    display:inline-block;
+    padding:3px 8px;
+    margin-bottom:8px;
+    border:1px solid var(--orange);
+    background:var(--orange); color:#fff;
+    font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; font-weight:500;
+  }
+  @media (max-width:820px){
+    .mhead{ display:none; }
+    .mrow{ grid-template-columns:1fr; gap:8px; }
+    .mrow .pri{ justify-self:start; }
+  }
+
+  /* EU STRIP */
+  .eustrip{ margin-top:80px; }
+  .eu-grid{
+    margin-top:24px;
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:0;
+    border-top:1px solid var(--rule);
+  }
+  .eu-grid .e{
+    padding:32px 28px 32px 0;
+    border-right:1px solid var(--rule);
+  }
+  .eu-grid .e:nth-child(2){ padding-left:28px; padding-right:28px; }
+  .eu-grid .e:last-child{ border-right:0; padding-left:28px; padding-right:0; }
+  .eu-grid .c{ font-family:var(--display); font-size:34px; font-weight:800; letter-spacing:-.005em; text-transform:uppercase; line-height:1; }
+  .eu-grid .n{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--orange); margin:6px 0 18px; }
+  .eu-grid .d{ color:var(--muted); font-size:14px; line-height:1.65; }
+  @media (max-width:820px){
+    .eu-grid{ grid-template-columns:1fr; }
+    .eu-grid .e{ padding:24px 0 !important; border-right:0; border-bottom:1px solid var(--rule); }
+    .eu-grid .e:last-child{ border-bottom:0; }
+  }
+
+  /* BOX BLOCK (verticals + why-logan) */
+  .twobox{
+    margin-top:80px;
+    display:grid; grid-template-columns:1fr 1fr; gap:0;
+    border-top:1px solid var(--rule);
+  }
+  .twobox .b{
+    padding:40px 36px 40px 0;
+    border-right:1px solid var(--rule);
+    position:relative;
+  }
+  .twobox .b:last-child{ border-right:0; padding-left:36px; padding-right:0; }
+  .twobox .b::before{ content:""; position:absolute; top:-1px; left:0; width:36px; height:3px; background:var(--orange); }
+  .twobox .b:last-child::before{ left:36px; }
+  .twobox .b h4{ font-family:var(--display); font-size:30px; font-weight:800; letter-spacing:-.005em; margin:14px 0 16px; text-transform:uppercase; line-height:1.05; }
+  .twobox .b .body{ color:var(--muted); font-size:14.5px; line-height:1.7; }
+  .twobox .b .body strong{ color:var(--black); font-weight:600; }
+  .twobox .b .body em{ color:var(--black); font-style:normal; font-weight:600; }
+  @media (max-width:820px){
+    .twobox{ grid-template-columns:1fr; }
+    .twobox .b{ padding:32px 0 !important; border-right:0; border-bottom:1px solid var(--rule); }
+    .twobox .b:last-child{ border-bottom:0; }
+    .twobox .b:last-child::before{ left:0; }
+  }
+
+  /* NEXT STEPS */
+  .steps{
+    margin-top:0;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+    border-top:1px solid var(--rule);
+  }
+  .steps .s{
+    padding:36px 28px 36px 0;
+    border-right:1px solid var(--rule);
+    position:relative;
+  }
+  .steps .s:nth-child(2){ padding-left:28px; padding-right:28px; }
+  .steps .s:last-child{ border-right:0; padding-left:28px; padding-right:0; }
+  .steps .s::before{ content:""; position:absolute; top:-1px; left:0; width:36px; height:3px; background:var(--orange); }
+  .steps .s:nth-child(2)::before{ left:28px; }
+  .steps .s:last-child::before{ left:28px; }
+  .steps .lbl{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--orange); }
+  .steps h4{ font-family:var(--display); font-size:30px; font-weight:800; letter-spacing:-.005em; margin:14px 0 16px; text-transform:uppercase; line-height:1.05; }
+  .steps p{ color:var(--muted); font-size:14.5px; line-height:1.7; }
+  @media (max-width:820px){
+    .steps{ grid-template-columns:1fr; }
+    .steps .s{ padding:32px 0 !important; border-right:0; border-bottom:1px solid var(--rule); }
+    .steps .s:last-child{ border-bottom:0; }
+    .steps .s:nth-child(2)::before, .steps .s:last-child::before{ left:0; }
+  }
+
+  /* CTA */
+  .cta{
+    margin-top:96px;
+    padding:64px 0 0;
+    border-top:1px solid var(--rule);
+  }
+  .cta h2{ font-size:clamp(40px, 6vw, 84px); font-weight:800; max-width:18ch; line-height:.98; }
+  .cta .body{ margin-top:28px; max-width:64ch; color:var(--muted); font-size:16px; line-height:1.7; }
+  .cta .contact{
+    margin-top:48px;
+    display:grid; grid-template-columns:auto 1fr auto; gap:32px;
+    align-items:baseline;
+    padding-top:24px;
+    border-top:1px solid var(--rule);
+    font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+  }
+  .cta .contact .name{ font-family:var(--body); font-size:17px; letter-spacing:0; text-transform:none; font-weight:600; color:var(--black); }
+  .cta .contact .role{ color:var(--muted); }
+  .cta .contact a{ color:var(--black); text-decoration:underline; text-underline-offset:4px; text-decoration-color:var(--orange); text-decoration-thickness:2px; }
+  .cta .contact a:hover{ color:var(--orange); }
+  @media (max-width:820px){
+    .cta .contact{ grid-template-columns:1fr; gap:8px; }
+  }
+
+  /* FOOTER */
+  footer{
+    background:var(--black); color:rgba(255,255,255,.6);
+    padding:32px var(--pad);
+    font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    text-align:center; line-height:1.7;
+  }
+  footer .em{ color:#fff; }
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#top">LOGAN<span class="x">×</span>CRITEO</a>
+    <nav class="links">
+      <a href="#about">01 About</a>
+      <a href="#capabilities">02 Capabilities</a>
+      <a href="#unlock">03 Partnership</a>
+      <a href="#track">04 Track Record</a>
+      <a href="#proposal">05 Proposal</a>
+      <a href="#why">06 Why Logan</a>
+      <a href="#next">07 Next Steps</a>
+    </nav>
+    <span class="conf">Confidential</span>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ COVER ============ -->
+  <section class="cover">
+    <div class="wrap">
+      <span class="eyebrow">Partnership Overview</span>
+      <h1 class="cover-title">Logan<span class="x">×</span>Criteo</h1>
+      <p class="lead">Building the most differentiated commerce media proposition in LATAM ex-Brazil — from day one.</p>
+      <div class="cover-meta">
+        <div>
+          <span class="lbl">Prepared for</span>
+          <span class="val">Baris — Criteo</span>
+        </div>
+        <div>
+          <span class="lbl">From</span>
+          <span class="val">Manuel Tomé, Logan.ai</span>
+        </div>
+        <div>
+          <span class="lbl">Classification</span>
+          <span class="val">Confidential</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 01 ABOUT ============ -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="num">01 — About Logan</div>
+        <div>
+          <h2>Performance at scale,<br>built on <span class="accent">attribution</span>.</h2>
+        </div>
+      </div>
+
+      <div class="twocol">
+        <div>
+          <p class="lead">Logan is an ad tech company with a global footprint across Latin America, Europe, Africa, and the United States, focused on driving measurable business outcomes for brands through commerce and e-commerce media.</p>
+          <p class="body body-muted" style="margin-top:24px;">The company works with more than 1,200 brands, both directly and through their agencies, including leading players across retail, CPG, and a wide range of other categories. Logan is deeply integrated with the major advertising agency groups in the markets where it operates, positioning itself as a strategic partner rather than a standalone technology vendor.</p>
+          <p class="body body-muted" style="margin-top:18px;">At its core, Logan is built around performance and attribution. The company helps brands generate and measure results across the full consumer journey, with a strong focus on sales, store visits, and digital interactions across multiple markets. This includes both online and offline environments, enabling a unified view of performance that connects media exposure to real-world outcomes.</p>
+          <p class="body body-muted" style="margin-top:18px;">In addition to its commercial capabilities, Logan operates as a backbone services provider for global companies, particularly in the area of footfall attribution. Through this role, the company supports large-scale measurement frameworks, delivering campaign attribution, performance analysis, and data-driven insights that inform strategic decision-making.</p>
+        </div>
+        <aside class="pull">
+          <span class="eyebrow">No DSP. No SSP.</span>
+          <h4>A connective infrastructure layer.</h4>
+          <p class="body body-muted">Logan does not operate its own DSP or SSP. Instead, it focuses on integrating and commercializing third-party inventory and technologies, acting as a connective infrastructure layer across the ecosystem. This approach allows the company to remain flexible, partner-driven, and deeply embedded within the evolving media and data landscape, while maintaining a clear focus on efficiency, transparency, and measurable impact.</p>
+        </aside>
+      </div>
+
+      <div class="stats">
+        <div class="cell">
+          <div class="n">1,200+</div>
+          <div class="l">Brand Clients</div>
+        </div>
+        <div class="cell muted">
+          <div class="n">350+</div>
+          <div class="l">Agency Partners</div>
+        </div>
+        <div class="cell muted">
+          <div class="n">4</div>
+          <div class="l">Continents</div>
+        </div>
+        <div class="cell muted">
+          <div class="n">10+</div>
+          <div class="l">Years in Market</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 CAPABILITIES ============ -->
+  <section id="capabilities" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="num">02 — Capabilities Core</div>
+        <div>
+          <h2>Three products,<br>one stack.</h2>
+          <p class="lead body-muted" style="margin-top:24px; color:var(--muted);">Logan operates as an adtech and martech platform — not a traditional agency. Our stack is built around three core products.</p>
+        </div>
+      </div>
+
+      <div class="cap-list">
+        <div class="cap-row">
+          <div class="idx">01</div>
+          <div class="name">Logan Ads</div>
+          <div class="desc">Cross-channel programmatic platform with 150+ ad formats. Full campaign management from display and video to audio and gaming. Built for performance — not reach for reach's sake.</div>
+          <div class="tags"><span>Programmatic</span><span>150+ formats</span><span>Full campaign management</span></div>
+        </div>
+        <div class="cap-row">
+          <div class="idx">02</div>
+          <div class="name">Super Small Data</div>
+          <div class="desc">First-party data engine and audience intelligence platform (DaaS). Proprietary cookieless segmentation and targeting layer built entirely on consented, opt-in data — verified and compliant with local data regulations across every active market. Directly complementary to Criteo's commerce data: where Criteo sees purchase intent, Super Small Data adds behavioral, contextual and location-based signals that sharpen audience precision.</div>
+          <div class="tags"><span>1P Data · DaaS</span><span>Cookieless</span><span>Consent-verified</span><span>Locally compliant</span></div>
+        </div>
+        <div class="cap-row">
+          <div class="idx">03</div>
+          <div class="name">PMP</div>
+          <div class="desc">Premium private marketplace focused on video, audio and gaming verticals. Curated, brand-safe inventory in high-attention environments — directly relevant for commerce contexts where intent needs to be met with quality.</div>
+          <div class="tags"><span>CTV · Audio · Gaming</span><span>Curated</span><span>Brand-safe</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:48px;">
+        <span class="eyebrow">Active verticals</span>
+        <div class="taglist">
+          <span class="t">CPG / FMCG — €4M+ in active JBPs with major regional advertisers, Coca-Cola</span>
+          <span class="t">Automotive — BMW</span>
+          <span class="t">Technology — Google, Amazon</span>
+          <span class="t">Retail and e-commerce</span>
+          <span class="t">Financial services</span>
+        </div>
+      </div>
+
+      <p class="body body-muted" style="margin-top:48px; max-width:80ch;">We have existing experience running retargeting and commerce-oriented campaigns — directly complementary to Criteo's offering. Our data layer (Super Small Data) combined with Criteo's commerce signals creates a differentiated proposition that neither can deliver independently.</p>
+    </div>
+  </section>
+
+  <!-- ============ 03 UNLOCK (DARK) ============ -->
+  <section id="unlock" class="unlock">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="num">03 — What the Partnership Unlocks</div>
+        <div>
+          <h2>Online + offline.<br>One <span class="accent" style="color:var(--orange);">closed loop</span>.</h2>
+          <p class="lead" style="margin-top:24px; color:rgba(255,255,255,.85);">This is the most differentiated aspect of the Logan × Criteo proposition — and the one that sets it apart from any other partnership Criteo could pursue in LATAM.</p>
+        </div>
+      </div>
+
+      <div class="duo">
+        <div class="col">
+          <div class="head">What Logan brings</div>
+          <ul>
+            <li><span class="k">L/01</span><span><strong>Metamobility.</strong> Real-world location data that tracks users across their physical and digital daily life. Built on a network of opted-in location signals across LATAM, Metamobility matches device-level movement data to known audience profiles — enabling store visit verification and offline purchase attribution at scale. Compatible with standard MMP integrations including AppsFlyer and Adjust. Data sourced from opted-in mobile environments, validated against point-of-sale and geo-fenced retail locations across priority markets.</span></li>
+            <li><span class="k">L/02</span><span><strong>Super Small Data.</strong> Cookieless first-party audiences built from on and off-channel signals.</span></li>
+            <li><span class="k">L/03</span><span><strong>150+ ad formats.</strong> For activation across any digital environment.</span></li>
+            <li><span class="k">L/04</span><span><strong>PMP.</strong> In-game, CTV and audio inventory — premium environments for commerce contexts.</span></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="head">What Criteo brings</div>
+          <ul>
+            <li><span class="k">C/01</span><span><strong>700M+ daily active shoppers</strong> with purchase intent signals.</span></li>
+            <li><span class="k">C/02</span><span><strong>4B+ SKUs</strong> and real-time cart and transaction data.</span></li>
+            <li><span class="k">C/03</span><span><strong>Best-in-class retargeting engine</strong> for commerce and retail.</span></li>
+            <li><span class="k">C/04</span><span><strong>Commerce Yield</strong> for retail media monetisation.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="funnel">
+        <div>
+          <span class="eyebrow" style="color:var(--orange);">Full-funnel commerce attribution</span>
+          <h3 style="margin-top:14px;">From digital impression<br>to in-store purchase.</h3>
+          <ol class="funnel-list">
+            <li>Logan Ads delivers the programmatic impression.</li>
+            <li>Criteo retargets the high-intent shopper across commerce environments.</li>
+            <li>Cart activity and transaction data are captured.</li>
+            <li>Logan's Metamobility verifies the in-store visit and purchase.</li>
+          </ol>
+        </div>
+        <div class="body">
+          <p>Logan's <strong>Metamobility</strong> tracks a user's physical movements and purchase behaviour in the real world. Criteo tracks that same user's online shopping behaviour, cart activity and transactions. Together, we can connect a digital ad impression to an in-store purchase — closing the attribution gap that most advertisers in LATAM still cannot solve.</p>
+          <p>This means <strong>a major CPG advertiser</strong> can run a programmatic campaign through Logan Ads, retarget high-intent shoppers via Criteo's commerce engine, and then measure whether those users actually walked into a store and bought the product — using Logan's real-world location data as the attribution layer.</p>
+          <p>That is a proposition that no other partnership in LATAM can currently offer.</p>
+        </div>
+      </div>
+      <div class="funnel" style="margin-top:64px; padding-top:48px; border-top:1px solid rgba(255,255,255,.18);">
+        <div>
+          <span class="eyebrow" style="color:var(--orange);">Data monetization &amp; sales lift attribution</span>
+          <h3 style="margin-top:14px;">A new revenue line<br>for Criteo.</h3>
+        </div>
+        <div class="body">
+          <p>Beyond the standard sales representation model, the partnership unlocks a new revenue stream for Criteo: data monetization through sales lift measurement and attribution models structured directly with brands. This is a layer that sits on top of media buying and creates incremental margin without overlapping with Criteo's existing operations.</p>
+          <p>Logan's positioning in commerce media already generates spontaneous demand for this kind of measurement. Brands are actively asking for sales lift attribution — and few players in the region can deliver it at scale. The Criteo × Logan partnership is uniquely positioned to monetize this demand, both in LATAM and in Brazil, without conflicting with Criteo's local operations.</p>
+          <p>This is a clear competitive differentiator. Aleph cannot bring this to the table — they are positioned as a sales representation layer, not as a data and attribution layer. Logan can. Adding this revenue line to the standard sales rep model is what makes the proposition structurally superior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 TRACK RECORD ============ -->
+  <section id="track">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="num">04 — Track Record</div>
+        <div>
+          <h2>Live proof points<br>across enterprise verticals.</h2>
+          <p class="lead body-muted" style="margin-top:24px; color:var(--muted);">Logan operates a direct commercial model with in-market teams across all LATAM countries. Our go-to-market combines two channels.</p>
+        </div>
+      </div>
+
+      <div class="cases">
+        <div class="case">
+          <div class="head">Case 01 · Major Regional CPG · CPG / FMCG</div>
+          <div class="num">€4M+<small>Active JBPs · With major regional advertisers</small></div>
+          <p>Active JBPs totaling €4M+ with major regional advertisers are a live proof point of our ability to close and manage large enterprise accounts in CPG — one of Criteo's strongest verticals globally. Full-cycle execution across campaign strategy, buying, and attribution — including integrated retargeting and store visit measurement.</p>
+          <div class="meta"><span>JBP · CPG</span><span>LATAM · Full-Funnel</span></div>
+        </div>
+        <div class="case">
+          <div class="head">Case 02 · Google &amp; Amazon · Technology</div>
+          <div class="ttl">Tier 1 global<br>direct brands.</div>
+          <p>Active brand relationships with two of the world's largest technology advertisers — demonstrating Logan's capacity to operate at global enterprise standard, manage complex multi-market briefs, and deliver against performance objectives in demanding, data-driven environments.</p>
+          <div class="meta"><span>Technology · Direct</span><span>Multi-market</span></div>
+        </div>
+        <div class="case">
+          <div class="head">Case 03 · BMW · Automotive</div>
+          <div class="ttl">Multi-market<br>enterprise.</div>
+          <p>Multi-market automotive campaigns combining brand and performance objectives — with real-world attribution via Metamobility to measure dealership visits as an outcome metric. Directly validates the Logan + Criteo attribution proposition at enterprise scale.</p>
+          <div class="meta"><span>Automotive · Attribution</span><span>Metamobility</span></div>
+        </div>
+      </div>
+
+      <div class="gtm">
+        <div class="g">
+          <div class="n">1,200+</div>
+          <div class="l">GTM Direct Brands · Active clients</div>
+          <p>Established relationships with marketing and media decision-makers at enterprise level across all LATAM markets. Pipeline for Criteo is not zero — it starts from day one.</p>
+        </div>
+        <div class="g">
+          <div class="n">350+</div>
+          <div class="l">GTM Agency Channel · Partners</div>
+          <p>Two-channel approach maximizes reach and accelerates Criteo's business development. Our agency relationships are deeply integrated across all major LATAM holding groups.</p>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:32px; max-width:80ch;">On campaign management: our teams handle full-cycle execution — strategy, setup, optimization and reporting — with proprietary technology for audience building, media buying and performance measurement.</p>
+    </div>
+  </section>
+
+  <!-- ============ 05 PROPOSAL ============ -->
+  <section id="proposal" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="num">05 — Partnership Proposal</div>
+        <div>
+          <h2>Markets, priority,<br>and rollout.</h2>
+        </div>
+      </div>
+
+      <div class="markets-note">
+        <div class="lbl">Revenue Note</div>
+        <div>I'd prefer to build a bottoms-up model together on a call, using Criteo's average revenue per advertiser and the addressable client base we can realistically activate per market. I can have a first estimate ready before we speak.</div>
+      </div>
+
+      <div class="mtable">
+        <div class="mhead">
+          <div>Market</div>
+          <div>Logan presence &amp; rationale</div>
+          <div>Score</div>
+          <div>Priority</div>
+        </div>
+        <div class="mrow">
+          <div class="country"><span class="pilot-tag">Recommended Start</span><br>Argentina</div>
+          <div class="why">Strong local commercial relationships across CPG, retail, and agency channels. Recommended as the optimal starting point based on existing client density, agency integration depth, and speed to activation — final market selection to be defined jointly with Criteo.</div>
+          <div class="stars">★★★</div>
+          <div class="pri high">High</div>
+        </div>
+        <div class="mrow">
+          <div class="country">Mexico</div>
+          <div class="why">Largest e-commerce market in LATAM ex-BR. Strong CPG and retail client base. High e-commerce penetration = ideal Criteo environment.</div>
+          <div class="stars">★★★</div>
+          <div class="pri high">High</div>
+        </div>
+        <div class="mrow">
+          <div class="country">Colombia</div>
+          <div class="why">Fast-growing digital ad market. Strong retail and financial services verticals. Good agency density.</div>
+          <div class="stars">★★★</div>
+          <div class="pri high">High</div>
+        </div>
+        <div class="mrow">
+          <div class="country">Peru</div>
+          <div class="why">Growing e-commerce adoption. CPG and retail are the dominant categories. Good white space for Criteo.</div>
+          <div class="stars">★★★</div>
+          <div class="pri high">High</div>
+        </div>
+        <div class="mrow">
+          <div class="country">Chile</div>
+          <div class="why">Highest digital maturity in the region. Sophisticated advertisers who are ready for commerce media.</div>
+          <div class="stars">★★★</div>
+          <div class="pri high">High</div>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:18px; max-width:80ch;">Logan operates across the rest of LATAM as well — additional markets activated in subsequent phases based on the rollout agreed with Criteo.</p>
+
+      <div class="twobox">
+        <div class="b">
+          <span class="eyebrow">Box 01 — Core Verticals for Criteo via Logan</span>
+          <h4>Where the value compounds.</h4>
+          <p class="body"><strong>CPG / FMCG</strong> — High purchase frequency, proven retargeting ROI. Criteo's commerce data + Logan's 1PD audiences = highly precise targeting for repeat purchase. Major regional advertisers (€4M+ in active JBPs) including Coca-Cola already active.</p>
+          <p class="body" style="margin-top:14px;"><strong>Retail &amp; e-commerce</strong> — Core Criteo use case. LATAM e-commerce is growing fast and most mid-large retailers are not yet using commerce media effectively — that's the gap. Active relationships across MX, CO, PE, CL.</p>
+          <p class="body" style="margin-top:14px;"><strong>Financial services</strong> — High-value conversions, intent-driven audience. Retargeting for financial products has strong measurable ROI — a natural fit. Growing segment across the region.</p>
+          <p class="body" style="margin-top:18px;"><em>Core assumption:</em> the biggest addressable market sits with mid to large advertisers already investing in digital but not yet using commerce media. That's not a niche — it's the majority of the market in LATAM today.</p>
+        </div>
+        <div class="b">
+          <span class="eyebrow">Box 02 — Why Logan, Not Other Players</span>
+          <h4>A data and attribution integration.</h4>
+          <p class="body">Logan offers Criteo something other players in the region cannot: <strong>real-world attribution at scale through Metamobility</strong>. The partnership is not a reseller arrangement — it is a data and attribution integration that creates a differentiated proposition for LATAM advertisers. We bring existing, activated commercial relationships across CPG, retail, and financial services in every priority market — not a greenfield pipeline that still needs to be built.</p>
+        </div>
+      </div>
+
+      <div class="eustrip">
+        <span class="eyebrow">EU Strip — Spain (HQ) · Portugal · Italy</span>
+        <div class="eu-grid">
+          <div class="e">
+            <div class="c">Spain</div>
+            <div class="n">HQ</div>
+            <div class="d">Headquarters for European operations in Madrid. Strong CPG and retail client base. GDPR-compliant data infrastructure already in place.</div>
+          </div>
+          <div class="e">
+            <div class="c">Portugal</div>
+            <div class="n">Active</div>
+            <div class="d">Active market. Natural bridge between European operations and Portuguese-speaking markets. Retail and CPG focus.</div>
+          </div>
+          <div class="e">
+            <div class="c">Italy</div>
+            <div class="n">Active</div>
+            <div class="d">Active market. Strong fashion, retail and CPG verticals. Growing e-commerce adoption = relevant Criteo environment.</div>
+          </div>
+        </div>
+        <p class="body body-muted" style="margin-top:32px; max-width:80ch;">The European footprint is relevant beyond just additional markets — it signals to Criteo that Logan operates under GDPR standards, has experience with regulated data environments, and can scale the partnership beyond LATAM if the initial pilot succeeds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 WHY LOGAN ============ -->
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="num">06 — Why Logan</div>
+        <div>
+          <h2>A data and attribution<br><span class="accent">integration</span>.</h2>
+          <p class="lead body-muted" style="margin-top:24px; color:var(--muted);">Logan offers Criteo something other players in the region cannot: real-world attribution at scale through Metamobility. The partnership is not a reseller arrangement — it is a data and attribution integration that creates a differentiated proposition for LATAM advertisers.</p>
+        </div>
+      </div>
+
+      <p class="body" style="margin-bottom:40px; max-width:80ch;">Three things no other regional partner brings simultaneously:</p>
+
+      <div class="steps">
+        <div class="s">
+          <div class="lbl">01</div>
+          <h4>Real-world closed loop.</h4>
+          <p>Metamobility connects the digital impression to the physical purchase. No other LATAM partner has this capability at scale, with MMP-compatible infrastructure and consent-verified data.</p>
+        </div>
+        <div class="s">
+          <div class="lbl">02</div>
+          <h4>Activated pipeline, not greenfield.</h4>
+          <p>We bring existing, live commercial relationships across CPG, retail, and financial services in every priority market. The pipeline for Criteo does not start from zero — it starts from 1,200 active brands and 350 agency relationships that already trust Logan's execution.</p>
+        </div>
+        <div class="s">
+          <div class="lbl">03</div>
+          <h4>GDPR-grade infrastructure.</h4>
+          <p>Our European operations — Spain (HQ), Portugal, Italy — mean Logan already operates under the most demanding data compliance standards in the world. That is not a box-checking exercise. It is evidence that the data infrastructure can scale globally if the pilot succeeds.</p>
+        </div>
+      </div>
+
+      <p class="body" style="margin-top:48px; max-width:80ch;">This is not a pitch from a new entrant. Logan is an operational partner with enterprise clients, live attribution capability, and regional depth that takes years to build.</p>
+    </div>
+  </section>
+
+  <!-- ============ 07 NEXT STEPS + CTA ============ -->
+  <section id="next" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="num">07 — Next Steps</div>
+        <div>
+          <h2>One call.<br>One <span class="accent">decision</span>.</h2>
+          <p class="lead body-muted" style="margin-top:24px; color:var(--muted);">We propose a 45-minute working session with the following agenda:</p>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="s">
+          <div class="lbl">01</div>
+          <h4>Technical walkthrough.</h4>
+          <p>Walk through Metamobility technical architecture and MMP integration capabilities.</p>
+        </div>
+        <div class="s">
+          <div class="lbl">02</div>
+          <h4>Bottoms-up revenue model.</h4>
+          <p>Build a bottoms-up revenue model together using Criteo's regional advertiser data and Logan's activatable client base.</p>
+        </div>
+        <div class="s">
+          <div class="lbl">03</div>
+          <h4>Define the structure.</h4>
+          <p>Define the structure: market, vertical, client, timeline, and success metrics.</p>
+        </div>
+      </div>
+
+      <p class="body" style="margin-top:48px; max-width:80ch;">The goal of the call is not to explore whether this makes sense. The goal is to align on scope and define the path to activation.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="em">LOGAN.AI</span> — CONFIDENTIAL — PARTNERSHIP OVERVIEW · LATAM EX-BRAZIL — APRIL 2026 — PREPARED EXCLUSIVELY FOR CRITEO
+</footer>
+
+<script>
+  const links = document.querySelectorAll('.topbar .links a');
+  const sections = [...links].map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(a=>a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id));
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(s=>io.observe(s));
+</script>
+
+
+</body></html>
